@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Santa Air - Air Conditioning, Ventilation & Refrigeration Services</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Professional HVAC services in Perth - Santa Air specialises in air conditioning, ventilation and refrigeration for homes & businesses. 24/7 emergency support." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="Santa Air - Air Conditioning, Ventilation & Refrigeration Services" />
+  <meta property="og:description" content="Professional HVAC services in Perth - Santa Air specialises in air conditioning, ventilation and refrigeration for homes & businesses." />
+  <meta property="og:type" content="business.business" />
+  <meta property="og:locale" content="en_AU" />
+
+  <!-- Local Business structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Santa Air",
+    "image": "https://huggingface.co/spaces/ArtemSamul/santa-air-2/resolve/main/images/Untitled design.png",
+    "@id": "",
+    "url": "",
+    "telephone": "405 141 003",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Perth",
+      "addressCountry": "AU"
+    },
+    "openingHours": ["Mo-Fr 08:00-18:00","Sa 09:00-16:00"],
+    "priceRange": "$$"
+  }
+  </script>
+
+  <!-- Fonts & Tailwind (kept) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com" defer></script>
+
+  <!-- AOS (deferred) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+  <!-- Feather icons (single copy) -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js" defer></script>
+
+  <!-- EmailJS (optional) - only needed if you want client-side sending without your own server.
+       Replace the placeholders in the JS with your EmailJS user/service/template IDs. -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" defer></script>
+
+  <style>
+    :root { --nav-height: 64px; }
+    html { scroll-padding-top: var(--nav-height); }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #F9FAFB; /* bg-gray-50 */
+      overflow-x: hidden; /* prevent horizontal cutoffs */
+    }
+
+    nav { height: var(--nav-height); }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #0c4a6e 0%, #0c4a6e 50%, #0284c7 100%);
+    }
+
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); }
+
+    /* Snowflake styles and improved animation that always starts above the banner */
+    #snowflakes { position:absolute; inset:0; pointer-events:none; overflow:hidden; }
+    .snowflake {
+      position:absolute;
+      top: -12vh; /* start slightly above the banner */
+      color: white;
+      opacity: 0.9;
+      will-change: transform, opacity;
+      font-size: 14px;
+      animation-name: fall;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      transform-origin: 50% 50%;
+      user-select:none;
+      -webkit-user-select:none;
+    }
+
+    @keyframes fall {
+      0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
+      10%  { opacity: 1; }
+      100% { transform: translateY(120vh) rotate(360deg); opacity: 0.9; }
+    }
+
+    /* small accessibility touches */
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+    /* Fix for images & object cropping (prevents odd cutoffs on zoom/inspect) */
+    img { max-width:100%; height:auto; display:block; }
+
+    /* make hero content more robust on extreme zooms */
+    .hero-content { padding: 3rem 1rem; }
+    .hero-heading { font-weight:700; line-height:1.05; }
+    .hero-sub { max-width:46rem; margin-left:auto; margin-right:auto; }
+
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg fixed w-full z-50" role="navigation" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center py-3">
+        <div class="flex items-center space-x-2">
+          <img src="https://huggingface.co/spaces/ArtemSamul/santa-air-2/resolve/main/images/Untitled design.png" alt="Santa Air logo" class="h-16 w-16">
+          <span class="font-bold text-2xl text-[#0c4a6e]">Santa Air</span>
+        </div>
+
+        <div class="hidden md:flex space-x-8" id="desktop-nav">
+          <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
+          <a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
+          <a href="#testimonials" class="text-gray-700 hover:text-blue-600 transition-colors">Testimonials</a>
+          <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors">About</a>
+          <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+        </div>
+
+        <div class="hidden md:flex items-center">
+          <a href="tel:405-141-003" class="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:from-blue-600 hover:to-blue-700 transition-colors">Call Now</a>
+        </div>
+
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-700" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu">
+            <i data-feather="menu"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+      <a href="#home" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200">Home</a>
+      <a href="#services" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200">Services</a>
+      <a href="#testimonials" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200">Testimonials</a>
+      <a href="#about" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200">About</a>
+      <a href="#contact" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden" style="padding-top: var(--nav-height);">
+    <div id="vanta-bg" class="absolute inset-0 opacity-10"></div>
+
+    <div class="max-w-7xl mx-auto text-center z-10 hero-content" data-aos="fade-up">
+      <h1 class="hero-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6">Stay Cool with Santa Air</h1>
+      <p class="text-lg sm:text-xl md:text-2xl text-blue-100 mb-8 hero-sub">Professional air conditioning, ventilation, and refrigeration services for your home and business</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contact" class="bg-white text-[#0c4a6e] px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors">Get a Free Quote</a>
+        <a href="#services" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#0c4a6e] transition-colors">Our Services</a>
+      </div>
+    </div>
+
+    <!-- Animated snowflakes container (starts above the banner) -->
+    <div id="snowflakes" aria-hidden="true"></div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Expert Services</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Comprehensive HVAC solutions tailored to your specific needs</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+        <!-- Air Conditioning -->
+        <div class="service-card bg-gray-50 rounded-xl p-8 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 bg-[#e0f2fe] rounded-full flex items-center justify-center mb-6">
+            <i data-feather="thermometer" class="text-[#0c4a6e] w-8 h-8"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-800 mb-4">Air Conditioning</h3>
+          <p class="text-gray-600 mb-6">Installation, maintenance, and repair of all AC systems. Keep your space comfortable year-round.</p>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2"></i>System installation</li>
+            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2"></i>Regular maintenance</li>
+            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2"></i>Emergency repairs</li>
+          </ul>
+        </div>
+
+        <!-- Ventilation -->
+        <div class="service-card bg-gray-50 rounded-xl p-8 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-16 h-16 bg-[#e0f2fe] rounded-full flex items-center justify-center mb-6">
+            <i data-feather="wind" class="text-[#0c4a6e] w-8 h-8"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-800 mb-4">Ventilation</h3>
+          <p class="text-gray-600 mb-6">Improve indoor air quality with professional ventilation system services and solutions.</p>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2"></i>Air quality testing</li>
+            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2"></i>System design</li>
+            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2"></i>Installation & repair</li>
+          </ul>
+        </div>
+
+        <!-- Refrigeration -->
+        <div class="service-card bg-gray-50 rounded-xl p-8 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-16 h-16 bg-[#e0f2fe] rounded-full flex items-center justify-center mb-6">
+            <i data-feather="cloud-snow" class="text-[#0c4a6e] w-8 h-8"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-800 mb-4">Refrigeration</h3>
+          <p class="text-gray-600 mb-6">Commercial and residential refrigeration services to keep your perishables safe and fresh.</p>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2"></i>Commercial units</li>
+            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2"></i>Residential coolers</li>
+            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2"></i>Maintenance plans</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">What Our Customers Say</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Don't just take our word for it - hear from our satisfied customers</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 px-4">
+        <!-- Testimonials... (kept content same) -->
+        <div class="bg-gray-50 rounded-xl p-8" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-[#e0f2fe] rounded-full flex items-center justify-center mr-4"><i data-feather="star" class="text-yellow-500 w-6 h-6"></i></div>
+            <div><h4 class="font-semibold text-gray-800">Sarah Johnson</h4><p class="text-gray-600 text-sm">Homeowner</p></div>
+          </div>
+          <p class="text-gray-600 italic mb-4">"Santa Air transformed our home's comfort! Their team was professional, punctual, and the AC installation was flawless. Highly recommend!"</p>
+          <div class="flex text-yellow-400"><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i></div>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-8" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center mb-6"><div class="w-12 h-12 bg-[#e0f2fe] rounded-full flex items-center justify-center mr-4"><i data-feather="star" class="text-yellow-500 w-6 h-6"></i></div><div><h4 class="font-semibold text-gray-800">Mike Rodriguez</h4><p class="text-gray-600 text-sm">Restaurant Owner</p></div></div>
+          <p class="text-gray-600 italic mb-4">"Emergency refrigeration service saved our business! They arrived within an hour and had our coolers running perfectly. Exceptional service!"</p>
+          <div class="flex text-yellow-400"><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i></div>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-8" data-aos="fade-up" data-aos-delay="300">
+          <div class="flex items-center mb-6"><div class="w-12 h-12 bg-[#e0f2fe] rounded-full flex items-center justify-center mr-4"><i data-feather="star" class="text-yellow-500 w-6 h-6"></i></div><div><h4 class="font-semibold text-gray-800">Emily Chen</h4><p class="text-gray-600 text-sm">Office Manager</p></div></div>
+          <p class="text-gray-600 italic mb-4">"The ventilation system upgrade has made a huge difference in our office air quality. The team was clean, efficient, and very knowledgeable."</p>
+          <div class="flex text-yellow-400"><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <h2 class="text-4xl font-bold text-gray-800 mb-6">Why Choose Santa Air?</h2>
+          <p class="text-lg text-gray-600 mb-6">With over 15 years of experience in the HVAC industry, Santa Air has built a reputation for excellence, reliability, and exceptional customer service.</p>
+          <div class="space-y-4">
+            <div class="flex items-start"><div class="w-12 h-12 bg-[#e0f2fe] rounded-full flex items-center justify-center flex-shrink-0 mr-4"><i data-feather="award" class="text-[#0c4a6e]"></i></div><div><h4 class="font-semibold text-gray-800 mb-2">Certified Professionals</h4><p class="text-gray-600">Our technicians are fully certified and continuously trained on the latest technologies.</p></div></div>
+            <div class="flex items-start"><div class="w-12 h-12 bg-[#e0f2fe] rounded-full flex items-center justify-center flex-shrink-0 mr-4"><i data-feather="clock" class="text-[#0c4a6e]"></i></div><div><h4 class="font-semibold text-gray-800 mb-2">24/7 Emergency Service</h4><p class="text-gray-600">We're here when you need us most, with rapid response times for emergency repairs.</p></div></div>
+            <div class="flex items-start"><div class="w-12 h-12 bg-[#e0f2fe] rounded-full flex items-center justify-center flex-shrink-0 mr-4"><i data-feather="shield" class="text-[#0c4a6e]"></i></div><div><h4 class="font-semibold text-gray-800 mb-2">Quality Guarantee</h4><p class="text-gray-600">All our work comes with a comprehensive warranty and satisfaction guarantee.</p></div></div>
+          </div>
+        </div>
+        <div data-aos="fade-left"><img src="https://huggingface.co/spaces/ArtemSamul/santa-air-2/resolve/main/images/Your paragraph text (2).png" alt="HVAC Technician" class="rounded-xl shadow-lg w-full h-full object-cover"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+        <p class="text-xl text-gray-600">Ready to experience the Santa Air difference? Contact us today!</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <div data-aos="fade-right">
+          <!-- contact form: JS will try EmailJS -> Formspree -> mailto fallback -->
+          <form id="contact-form" class="space-y-6" novalidate>
+            <div>
+              <label class="block text-gray-700 mb-2">Name</label>
+              <input id="name" name="name" required type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+            </div>
+            <div>
+              <label class="block text-gray-700 mb-2">Email</label>
+              <input id="email" name="email" required type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+            </div>
+            <div>
+              <label class="block text-gray-700 mb-2">Phone</label>
+              <input id="phone" name="phone" type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+            </div>
+            <div>
+              <label class="block text-gray-700 mb-2">Message</label>
+              <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+            </div>
+
+            <div id="form-msg" class="text-sm"></div>
+
+            <button id="submit-btn" type="submit" class="w-full bg-[#0c4a6e] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#0284c7] transition-colors">Send Message</button>
+          </form>
+        </div>
+
+        <div data-aos="fade-left">
+          <div class="bg-gray-50 rounded-xl p-8">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-6">Contact Information</h3>
+
+            <div class="space-y-4">
+              <div class="flex items-center">
+                <div class="w-10 h-10 bg-[#e0f2fe] rounded-full flex items-center justify-center mr-4"><i data-feather="phone" class="text-[#0c4a6e]"></i></div>
+                <div><p class="text-gray-600">Phone</p><p class="font-semibold text-gray-800">405 141 003</p></div>
+              </div>
+
+              <div class="flex items-center">
+                <div class="w-10 h-10 bg-[#e0f2fe] rounded-full flex items-center justify-center mr-4"><i data-feather="mail" class="text-[#0c4a6e]"></i></div>
+                <div><p class="font-semibold text-gray-800">dmitriy@santaair.com</p></div>
+              </div>
+
+              <div class="flex items-center">
+                <div class="w-10 h-10 bg-[#e0f2fe] rounded-full flex items-center justify-center mr-4"><i data-feather="map-pin" class="text-[#0c4a6e]"></i></div>
+                <div><p class="text-gray-600">Address</p><p class="font-semibold text-gray-800">Perth</p></div>
+              </div>
+            </div>
+
+            <div class="mt-8"><h4 class="font-semibold text-gray-800 mb-4">Business Hours</h4><div class="space-y-2 text-gray-600"><p>Monday - Friday: 8:00 AM - 6:00 PM</p><p>Saturday: 9:00 AM - 4:00 PM</p><p>Sunday: Emergency Services Only</p></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4"><img src="https://huggingface.co/spaces/ArtemSamul/santa-air-2/resolve/main/images/Untitled design.png" alt="Santa Air" class="h-12 w-12"><span class="font-bold text-xl text-white">Santa Air</span></div>
+          <p class="text-gray-400">Professional HVAC services you can trust. Keeping your environment perfect, all year round.</p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Services</h4>
+          <ul class="space-y-2 text-gray-400"><li><a href="#services" class="hover:text-white transition-colors">Air Conditioning</a></li><li><a href="#services" class="hover:text-white transition-colors">Ventilation</a></li><li><a href="#services" class="hover:text-white transition-colors">Refrigeration</a></li><li><a href="#services" class="hover:text-white transition-colors">Maintenance Plans</a></li></ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-gray-400"><li><a href="#home" class="hover:text-white transition-colors">Home</a></li><li><a href="#services" class="hover:text-white transition-colors">Services</a></li><li><a href="#testimonials" class="hover:text-white transition-colors">Testimonials</a></li><li><a href="#about" class="hover:text-white transition-colors">About</a></li><li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li></ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Connect With Us</h4>
+          <div class="flex space-x-4"><a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"><i data-feather="facebook"></i></a><a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"><i data-feather="twitter"></i></a><a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"><i data-feather="instagram"></i></a><a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"><i data-feather="linkedin"></i></a></div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400"><p>&copy; 2024 Santa Air. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <!-- Mobile Floating Call Now Button -->
+  <div class="md:hidden fixed bottom-4 right-4 z-50">
+    <a href="tel:405-141-003" class="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-4 rounded-full font-semibold hover:from-blue-600 hover:to-blue-700 transition-colors shadow-lg flex items-center justify-center">
+      <i data-feather="phone"></i>
+    </a>
+  </div>
+
+  <!-- Scripts: initialize UI, icons, AOS, mobile menu, snowflakes, and contact form handling -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initialize AOS
+      if (window.AOS) AOS.init({ duration: 800, once: true });
+
+      // Initialize Feather icons
+      if (window.feather) feather.replace();
+
+      // Mobile menu toggling + UX fixes
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      menuBtn && menuBtn.addEventListener('click', function () {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Close mobile menu after clicking a link (fix you reported)
+      document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuBtn && menuBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // Close menu on resize to desktop
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
+          mobileMenu.classList.add('hidden');
+          menuBtn && menuBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Close mobile menu when clicking outside (ux improvement)
+      document.addEventListener('click', (e) => {
+        if (window.innerWidth < 768) {
+          const target = e.target;
+          if (!mobileMenu.contains(target) && !menuBtn.contains(target)) {
+            mobileMenu.classList.add('hidden');
+            menuBtn && menuBtn.setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
+
+      /* Snowflakes: start above the banner, left uses percentage (no horizontal overflow), fewer on small screens */
+      function createSnowflakes() {
+        const container = document.getElementById('snowflakes');
+        if (!container) return;
+        const flakes = ['❄', '❅', '❆', '*'];
+        const maxFlakes = window.innerWidth < 768 ? 10 : 30;
+
+        container.innerHTML = '';
+        for (let i = 0; i < maxFlakes; i++) {
+          const snowflake = document.createElement('div');
+          snowflake.className = 'snowflake';
+          snowflake.textContent = flakes[Math.floor(Math.random() * flakes.length)];
+
+          // place across width using percent (prevents horizontal cutoffs on zoom)
+          snowflake.style.left = Math.random() * 100 + '%';
+
+          // slightly offset start top so they begin above the hero
+          snowflake.style.top = - (Math.random() * 12 + 2) + 'vh';
+
+          // random size and duration
+          const size = Math.random() * 10 + 10;
+          snowflake.style.fontSize = size + 'px';
+          snowflake.style.animationDuration = (Math.random() * 6 + 4) + 's';
+          snowflake.style.animationDelay = Math.random() * 5 + 's';
+
+          // subtle horizontal drift using CSS variable & transform
+          snowflake.style.opacity = 0.9;
+          container.appendChild(snowflake);
+        }
+      }
+
+      createSnowflakes();
+      // Recreate on orientation change / resize so the count adapts
+      window.addEventListener('orientationchange', createSnowflakes);
+      window.addEventListener('resize', () => { setTimeout(createSnowflakes, 250); });
+
+      /* Contact form handling:
+         - Primary: EmailJS (client-side send). Requires you to sign up at https://www.emailjs.com,
+           create a service + template, then set USER_ID, SERVICE_ID and TEMPLATE_ID below.
+         - Secondary: Formspree fallback (set FORMSPREE_ID) - you can use Formspree free plan.
+         - Tertiary: mailto fallback (opens user's email client).
+
+         IMPORTANT: Replace the placeholder constants below with your actual IDs. The code will
+         attempt EmailJS first if SERVICE_ID is provided, otherwise Formspree, otherwise mailto.
+      */
+
+      const EMAILJS_USER_ID = 'YOUR_EMAILJS_USER_ID'; // e.g. user_ABC123 (leave as placeholder if you don't use EmailJS)
+      const EMAILJS_SERVICE_ID = 'YOUR_EMAILJS_SERVICE_ID'; // e.g. service_xxx
+      const EMAILJS_TEMPLATE_ID = 'YOUR_EMAILJS_TEMPLATE_ID'; // e.g. template_xxx
+
+      const FORMSPREE_ID = 'YOUR_FORMSPREE_ID'; // e.g. form_id for https://formspree.io/f/{form_id}
+
+      // initialize emailjs if available and user provided an ID
+      if (window.emailjs && EMAILJS_USER_ID && EMAILJS_USER_ID !== 'YOUR_EMAILJS_USER_ID') {
+        try { emailjs.init(EMAILJS_USER_ID); } catch (err) { console.warn('EmailJS init error', err); }
+      }
+
+      const form = document.getElementById('contact-form');
+      const submitBtn = document.getElementById('submit-btn');
+      const formMsg = document.getElementById('form-msg');
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        formMsg.textContent = '';
+
+        // Simple client-side validation
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !message) {
+          formMsg.textContent = 'Please complete the required fields.';
+          formMsg.style.color = 'crimson';
+          return;
+        }
+
+        submitBtn.disabled = true;
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+
+        // Try EmailJS if configured
+        if (window.emailjs && EMAILJS_SERVICE_ID && EMAILJS_SERVICE_ID !== 'YOUR_EMAILJS_SERVICE_ID') {
+          try {
+            const templateParams = { from_name: name, from_email: email, phone: phone, message: message, to_email: 'dmitriy@santaair.com' };
+            await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
+            formMsg.textContent = 'Message sent — thank you! We will contact you shortly.';
+            formMsg.style.color = 'green';
+            form.reset();
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            return;
+          } catch (err) {
+            console.error('EmailJS error', err);
+            // fallthrough to next option
+          }
+        }
+
+        // Try Formspree if configured
+        if (FORMSPREE_ID && FORMSPREE_ID !== 'YOUR_FORMSPREE_ID') {
+          try {
+            const resp = await fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+              method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' }
+            });
+            if (resp.ok) {
+              formMsg.textContent = 'Message sent — thank you!';
+              formMsg.style.color = 'green';
+              form.reset();
+            } else {
+              const data = await resp.json();
+              throw new Error(data.error || 'Formspree error');
+            }
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            return;
+          } catch (err) {
+            console.error('Formspree error', err);
+          }
+        }
+
+        // Final fallback: open mail client (mailto)
+        try {
+          const mailto = `mailto:dmitriy@santaair.com?subject=${encodeURIComponent('Website enquiry from ' + name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\n${message}`)}`;
+          window.location.href = mailto;
+          formMsg.textContent = 'Opening your email client...';
+          formMsg.style.color = 'green';
+        } catch (err) {
+          formMsg.textContent = 'Unable to send message. Please email dmitriy@santaair.com directly.';
+          formMsg.style.color = 'crimson';
+        }
+
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      });
+
+    });
+  </script>
+</body>
+</html>
