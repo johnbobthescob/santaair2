@@ -412,6 +412,9 @@
       });
 
       /* Snowflakes: start above the banner, left uses percentage (no horizontal overflow), fewer on small screens */
+      let snowflakeTimeout;
+      let lastWidth = window.innerWidth;
+      
       function createSnowflakes() {
         const container = document.getElementById('snowflakes');
         if (!container) return;
@@ -442,10 +445,32 @@
         }
       }
 
+      function handleResize() {
+        const currentWidth = window.innerWidth;
+        
+        // Only recreate snowflakes if there's a significant width change (more than 100px)
+        // This prevents recreation on minor resize events during scrolling
+        if (Math.abs(currentWidth - lastWidth) > 100) {
+          clearTimeout(snowflakeTimeout);
+          snowflakeTimeout = setTimeout(() => {
+            createSnowflakes();
+            lastWidth = currentWidth;
+          }, 500); // Debounce for 500ms
+        }
+      }
+
       createSnowflakes();
-      // Recreate on orientation change / resize so the count adapts
-      window.addEventListener('orientationchange', createSnowflakes);
-      window.addEventListener('resize', () => { setTimeout(createSnowflakes, 250); });
+      
+      // Use debounced resize handler to prevent constant recreation
+      window.addEventListener('resize', handleResize);
+      
+      // Only recreate on actual orientation change (not on every touch/scroll)
+      window.addEventListener('orientationchange', () => {
+        setTimeout(() => {
+          createSnowflakes();
+          lastWidth = window.innerWidth;
+        }, 500);
+      });
 
       /* Contact form handling:
          - Primary: EmailJS (client-side send). Requires you to sign up at https://www.emailjs.com,
