@@ -61,7 +61,7 @@
     nav { height: var(--nav-height); }
 
     .hero-gradient {
-      background: linear-gradient(135deg, #0c4a6e 0%, #0c4a6e 50%, #0284c7 100%);
+      background: linear-gradient(135deg, #b91c1c 0%, #b91c1c 50%, #ef4444 100%);
     }
 
     .service-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); }
@@ -105,23 +105,23 @@
 <body>
   <!-- Navigation -->
   <nav class="bg-white shadow-lg fixed w-full z-50" role="navigation" aria-label="Main navigation">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex justify-between items-center py-3">
+    <div class="max-w-7xl mx-auto px-4 h-full">
+      <div class="flex justify-between items-center h-full">
         <div class="flex items-center space-x-2">
-          <img src="https://huggingface.co/spaces/ArtemSamul/santa-air-2/resolve/main/images/Untitled design.png" alt="Santa Air logo" class="h-16 w-16">
-          <span class="font-bold text-2xl text-[#0c4a6e]">Santa Air</span>
+          <img src="https://huggingface.co/spaces/ArtemSamul/santa-air-2/resolve/main/images/Untitled design.png" alt="Santa Air" class="h-28 w-28">
+          <span class="font-bold text-2xl text-red-700">Santa Air</span>
         </div>
 
         <div class="hidden md:flex space-x-8" id="desktop-nav">
-          <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
-          <a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
-          <a href="#testimonials" class="text-gray-700 hover:text-blue-600 transition-colors">Testimonials</a>
-          <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors">About</a>
-          <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+          <a href="#home" class="text-gray-700 hover:text-red-600 transition-colors">Home</a>
+          <a href="#services" class="text-gray-700 hover:text-red-600 transition-colors">Services</a>
+          <a href="#testimonials" class="text-gray-700 hover:text-red-600 transition-colors">Testimonials</a>
+          <a href="#about" class="text-gray-700 hover:text-red-600 transition-colors">About</a>
+          <a href="#contact" class="text-gray-700 hover:text-red-600 transition-colors">Contact</a>
         </div>
 
         <div class="hidden md:flex items-center">
-          <a href="tel:405-141-003" class="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:from-blue-600 hover:to-blue-700 transition-colors">Call Now</a>
+          <a href="tel:405-141-003" class="bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 rounded-full font-semibold hover:from-red-600 hover:to-red-700 transition-colors">Call Now</a>
         </div>
 
         <div class="md:hidden">
@@ -150,8 +150,8 @@
       <h1 class="hero-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6">Stay Cool with Santa Air</h1>
       <p class="text-lg sm:text-xl md:text-2xl text-blue-100 mb-8 hero-sub">Professional air conditioning, ventilation, and refrigeration services for your home and business</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#contact" class="bg-white text-[#0c4a6e] px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors">Get a Free Quote</a>
-        <a href="#services" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#0c4a6e] transition-colors">Our Services</a>
+        <a href="#contact" class="bg-white text-red-700 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors">Get a Free Quote</a>
+        <a href="#services" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-red-700 transition-colors">Our Services</a>
       </div>
     </div>
 
@@ -170,8 +170,8 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         <!-- Air Conditioning -->
         <div class="service-card bg-gray-50 rounded-xl p-8 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-          <div class="w-16 h-16 bg-[#e0f2fe] rounded-full flex items-center justify-center mb-6">
-            <i data-feather="thermometer" class="text-[#0c4a6e] w-8 h-8"></i>
+          <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+            <i data-feather="thermometer" class="text-red-700 w-8 h-8"></i>
           </div>
           <h3 class="text-2xl font-semibold text-gray-800 mb-4">Air Conditioning</h3>
           <p class="text-gray-600 mb-6">Installation, maintenance, and repair of all AC systems. Keep your space comfortable year-round.</p>
@@ -184,8 +184,8 @@
 
         <!-- Ventilation -->
         <div class="service-card bg-gray-50 rounded-xl p-8 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-          <div class="w-16 h-16 bg-[#e0f2fe] rounded-full flex items-center justify-center mb-6">
-            <i data-feather="wind" class="text-[#0c4a6e] w-8 h-8"></i>
+          <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+            <i data-feather="wind" class="text-red-700 w-8 h-8"></i>
           </div>
           <h3 class="text-2xl font-semibold text-gray-800 mb-4">Ventilation</h3>
           <p class="text-gray-600 mb-6">Improve indoor air quality with professional ventilation system services and solutions.</p>
@@ -198,8 +198,8 @@
 
         <!-- Refrigeration -->
         <div class="service-card bg-gray-50 rounded-xl p-8 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
-          <div class="w-16 h-16 bg-[#e0f2fe] rounded-full flex items-center justify-center mb-6">
-            <i data-feather="cloud-snow" class="text-[#0c4a6e] w-8 h-8"></i>
+          <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+            <i data-feather="cloud-snow" class="text-red-700 w-8 h-8"></i>
           </div>
           <h3 class="text-2xl font-semibold text-gray-800 mb-4">Refrigeration</h3>
           <p class="text-gray-600 mb-6">Commercial and residential refrigeration services to keep your perishables safe and fresh.</p>
@@ -225,7 +225,7 @@
         <!-- Testimonials... (kept content same) -->
         <div class="bg-gray-50 rounded-xl p-8" data-aos="fade-up" data-aos-delay="100">
           <div class="flex items-center mb-6">
-            <div class="w-12 h-12 bg-[#e0f2fe] rounded-full flex items-center justify-center mr-4"><i data-feather="star" class="text-yellow-500 w-6 h-6"></i></div>
+            <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4"><i data-feather="star" class="text-yellow-500 w-6 h-6"></i></div>
             <div><h4 class="font-semibold text-gray-800">Sarah Johnson</h4><p class="text-gray-600 text-sm">Homeowner</p></div>
           </div>
           <p class="text-gray-600 italic mb-4">"Santa Air transformed our home's comfort! Their team was professional, punctual, and the AC installation was flawless. Highly recommend!"</p>
@@ -233,13 +233,13 @@
         </div>
 
         <div class="bg-gray-50 rounded-xl p-8" data-aos="fade-up" data-aos-delay="200">
-          <div class="flex items-center mb-6"><div class="w-12 h-12 bg-[#e0f2fe] rounded-full flex items-center justify-center mr-4"><i data-feather="star" class="text-yellow-500 w-6 h-6"></i></div><div><h4 class="font-semibold text-gray-800">Mike Rodriguez</h4><p class="text-gray-600 text-sm">Restaurant Owner</p></div></div>
+          <div class="flex items-center mb-6"><div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4"><i data-feather="star" class="text-yellow-500 w-6 h-6"></i></div><div><h4 class="font-semibold text-gray-800">Mike Rodriguez</h4><p class="text-gray-600 text-sm">Restaurant Owner</p></div></div>
           <p class="text-gray-600 italic mb-4">"Emergency refrigeration service saved our business! They arrived within an hour and had our coolers running perfectly. Exceptional service!"</p>
           <div class="flex text-yellow-400"><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i></div>
         </div>
 
         <div class="bg-gray-50 rounded-xl p-8" data-aos="fade-up" data-aos-delay="300">
-          <div class="flex items-center mb-6"><div class="w-12 h-12 bg-[#e0f2fe] rounded-full flex items-center justify-center mr-4"><i data-feather="star" class="text-yellow-500 w-6 h-6"></i></div><div><h4 class="font-semibold text-gray-800">Emily Chen</h4><p class="text-gray-600 text-sm">Office Manager</p></div></div>
+          <div class="flex items-center mb-6"><div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4"><i data-feather="star" class="text-yellow-500 w-6 h-6"></i></div><div><h4 class="font-semibold text-gray-800">Emily Chen</h4><p class="text-gray-600 text-sm">Office Manager</p></div></div>
           <p class="text-gray-600 italic mb-4">"The ventilation system upgrade has made a huge difference in our office air quality. The team was clean, efficient, and very knowledgeable."</p>
           <div class="flex text-yellow-400"><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i><i data-feather="star" class="w-4 h-4 fill-current"></i></div>
         </div>
@@ -256,9 +256,9 @@
           <h2 class="text-4xl font-bold text-gray-800 mb-6">Why Choose Santa Air?</h2>
           <p class="text-lg text-gray-600 mb-6">With over 15 years of experience in the HVAC industry, Santa Air has built a reputation for excellence, reliability, and exceptional customer service.</p>
           <div class="space-y-4">
-            <div class="flex items-start"><div class="w-12 h-12 bg-[#e0f2fe] rounded-full flex items-center justify-center flex-shrink-0 mr-4"><i data-feather="award" class="text-[#0c4a6e]"></i></div><div><h4 class="font-semibold text-gray-800 mb-2">Certified Professionals</h4><p class="text-gray-600">Our technicians are fully certified and continuously trained on the latest technologies.</p></div></div>
-            <div class="flex items-start"><div class="w-12 h-12 bg-[#e0f2fe] rounded-full flex items-center justify-center flex-shrink-0 mr-4"><i data-feather="clock" class="text-[#0c4a6e]"></i></div><div><h4 class="font-semibold text-gray-800 mb-2">24/7 Emergency Service</h4><p class="text-gray-600">We're here when you need us most, with rapid response times for emergency repairs.</p></div></div>
-            <div class="flex items-start"><div class="w-12 h-12 bg-[#e0f2fe] rounded-full flex items-center justify-center flex-shrink-0 mr-4"><i data-feather="shield" class="text-[#0c4a6e]"></i></div><div><h4 class="font-semibold text-gray-800 mb-2">Quality Guarantee</h4><p class="text-gray-600">All our work comes with a comprehensive warranty and satisfaction guarantee.</p></div></div>
+            <div class="flex items-start"><div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4"><i data-feather="award" class="text-red-700"></i></div><div><h4 class="font-semibold text-gray-800 mb-2">Certified Professionals</h4><p class="text-gray-600">Our technicians are fully certified and continuously trained on the latest technologies.</p></div></div>
+            <div class="flex items-start"><div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4"><i data-feather="clock" class="text-red-700"></i></div><div><h4 class="font-semibold text-gray-800 mb-2">24/7 Emergency Service</h4><p class="text-gray-600">We're here when you need us most, with rapid response times for emergency repairs.</p></div></div>
+            <div class="flex items-start"><div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4"><i data-feather="shield" class="text-red-700"></i></div><div><h4 class="font-semibold text-gray-800 mb-2">Quality Guarantee</h4><p class="text-gray-600">All our work comes with a comprehensive warranty and satisfaction guarantee.</p></div></div>
           </div>
         </div>
         <div data-aos="fade-left"><img src="https://huggingface.co/spaces/ArtemSamul/santa-air-2/resolve/main/images/Your paragraph text (2).png" alt="HVAC Technician" class="rounded-xl shadow-lg w-full h-full object-cover"></div>
@@ -297,7 +297,7 @@
 
             <div id="form-msg" class="text-sm"></div>
 
-            <button id="submit-btn" type="submit" class="w-full bg-[#0c4a6e] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#0284c7] transition-colors">Send Message</button>
+            <button id="submit-btn" type="submit" class="w-full bg-red-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-red-500 transition-colors">Send Message</button>
           </form>
         </div>
 
@@ -307,17 +307,17 @@
 
             <div class="space-y-4">
               <div class="flex items-center">
-                <div class="w-10 h-10 bg-[#e0f2fe] rounded-full flex items-center justify-center mr-4"><i data-feather="phone" class="text-[#0c4a6e]"></i></div>
+                <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-4"><i data-feather="phone" class="text-red-700"></i></div>
                 <div><p class="text-gray-600">Phone</p><p class="font-semibold text-gray-800">405 141 003</p></div>
               </div>
 
               <div class="flex items-center">
-                <div class="w-10 h-10 bg-[#e0f2fe] rounded-full flex items-center justify-center mr-4"><i data-feather="mail" class="text-[#0c4a6e]"></i></div>
+                <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-4"><i data-feather="mail" class="text-red-700"></i></div>
                 <div><p class="font-semibold text-gray-800">dmitriy@santaair.com</p></div>
               </div>
 
               <div class="flex items-center">
-                <div class="w-10 h-10 bg-[#e0f2fe] rounded-full flex items-center justify-center mr-4"><i data-feather="map-pin" class="text-[#0c4a6e]"></i></div>
+                <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-4"><i data-feather="map-pin" class="text-red-700"></i></div>
                 <div><p class="text-gray-600">Address</p><p class="font-semibold text-gray-800">Perth</p></div>
               </div>
             </div>
@@ -361,7 +361,7 @@
 
   <!-- Mobile Floating Call Now Button -->
   <div class="md:hidden fixed bottom-4 right-4 z-50">
-    <a href="tel:405-141-003" class="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-4 rounded-full font-semibold hover:from-blue-600 hover:to-blue-700 transition-colors shadow-lg flex items-center justify-center">
+    <a href="tel:405-141-003" class="bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-4 rounded-full font-semibold hover:from-red-600 hover:to-red-700 transition-colors shadow-lg flex items-center justify-center">
       <i data-feather="phone"></i>
     </a>
   </div>
